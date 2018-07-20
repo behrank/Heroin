@@ -1,0 +1,24 @@
+{
+  "name": "heroin",
+  "version": "1.0.0",
+  "description": "Superhero social app",
+  "main": "hero.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behrank/Heroin.git"
+  },
+  "keywords": [
+    "Hero",
+    "rate",
+    "social"
+  ],
+  "author": "Behran Kankul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/behrank/Heroin/issues"
+  },
+  "homepage": "https://github.com/behrank/Heroin#readme"
+}
