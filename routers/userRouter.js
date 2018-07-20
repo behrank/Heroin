@@ -68,7 +68,6 @@ router.get("/:userId/logout", (req, res) => {
         });
 
 });
-
 router.post("/:userId/notification/token", (req, res) => {
     notificationTokenModel.insert(req.params.userId, req.body.token, req)
         .then((token) => {
