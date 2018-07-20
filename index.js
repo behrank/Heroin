@@ -1,6 +1,5 @@
 const express = require("express");
 const db = require("./db");
-const app = express();
 const logger = require("./utilities/logger");
 const consoleLogger = logger.init(logger.types.CONSOLE);
 const config = require("./utilities/config");
