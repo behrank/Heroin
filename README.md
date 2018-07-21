@@ -13,9 +13,9 @@ Zeplin Hackaboom 2018
 * You may view or rate super hero's skills (courage, respect to environment and his charisma) who's helped you.
 
 ## Built By
-* [Selin İmre]() - [UI/UIX]
+* [Selin İmre] - [UI/UIX]
 * [Behran Kankul](https://github.com/behrank) - [Backend]
-* [Yaser Yıldız]() - [iOS]
+* [Yaser Yıldız] - [iOS]
 * [Yunus Kılıç](https://github.com/yunuseker) - [Android] 
 
 ## Supported Languages
