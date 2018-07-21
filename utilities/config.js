@@ -16,7 +16,7 @@ function init() {
             port: process.env.PORT || 8080,
         },
         cacheServer:{
-            connectionString: ""
+            connectionString: "" //Redis url
         }
     };
     if (config.dbServer.host == undefined) {
