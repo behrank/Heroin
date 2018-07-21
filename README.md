@@ -33,7 +33,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Service
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/collections/ead7bee222b830b97780)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/collections/09f5d35e673688a8d642)
 
 ## Installing
 
