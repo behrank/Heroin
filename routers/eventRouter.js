@@ -39,8 +39,8 @@ router.post("/", (req, res) => {
                     .send(response(err.statusCode, err.message));
             });
 });
-router.get("/",(req,res) => {
-    eventModel.getListByLocation(req.body.lat,req.body.lng,req)
+router.get("/:lat/:lng/",(req,res) => {
+    eventModel.getListByLocation(req.params.lat,req.params.lng,req)
     .then((doc) => {
         res.status(responseCode.OK)
             .send(response(responseCode.OK, "", {

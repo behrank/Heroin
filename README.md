@@ -1,6 +1,27 @@
 # Heroin
 Zeplin Hackaboom 2018
 
+## Features as a Hero
+* Receive help requests from human beings. 🚀
+* Create secret parties with other super heroes
+* See your public view as a hero. Public will vote your skills.
+
+## Features as a Human being
+* Receive help requests from human beings. 🚀
+* Create secret parties with other super heroes
+* See your public view as a hero. Public will vote your skills.
+
+## Built By
+* [Selin İmre]() - [UI/UIX]
+* [Behran Kankul](https://github.com/behrank) - [Backend]
+* [Yaser Yıldız]() - [iOS]
+* [Yunus Kılıç](https://github.com/yunuseker) - [Android] 
+
+## Supported Languages
+* English 🇬🇧 (Base)
+* Turkish 🇹🇷
+* Klingon 👾 (Just kidding... or not?)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -76,3 +97,6 @@ Now you are all set!
 * [Docker + Swarm](https://docker.com) - Operating-system-level virtualization.
 * [Nginx](https://www.nginx.com/) - Web server used as a reverse proxy and load balancer.
 * [Makefile](https://en.wikipedia.org/wiki/Makefile) - Build automation tool.
+
+## License
+This project is licensed under NO License - take it, copy it, show it to your friends and relatives or even to your Tinder match.
