@@ -15,7 +15,7 @@ const voteSchema = new Schema({
     user: objectId
 }, { versionKey: false });
 
-mongoose.model("hero", heroSchema, collections.hero);
+mongoose.model("hero", voteSchema, collections.vote);
 var model = mongoose.model("hero");
 
 model.getListByHeroId = (id, req) => {

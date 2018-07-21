@@ -6,6 +6,7 @@ const eventModel = require("../models/event");
 const userModel = require("../models/user")
 const responseCode = require("../utilities/responseCode");
 const redisClient = require("../db/redis");
+const voteModel = require("../models/vote")
 const redisKeys = require("../db/redisKeys");
 const response = require("../utilities/response");
 const _dictionary = require("../localization/dictionary");
@@ -53,6 +54,22 @@ router.get("/",(req,res) => {
     });
 });
 router.post("/vote",(req,res) =>{
-
+    var vote = new Vote({
+        charisma:req.body.charPoint,
+        courage:req.body.couragePoint,
+        respect:req.body.resPoint,
+        eventId:req.body.eventId,
+        hero: req.body.heroId,
+        user: req.body.userId
+    });
+    vote.save((err, vote) => {
+        if (err) console.log(err);
+        console.log(vote);
+        res.status(responseCode.CREATED)
+        .send(response(responseCode.CREATED, "", {
+            key: "vote",
+            value: vote
+        }));
+    });
 });
 module.exports = router;

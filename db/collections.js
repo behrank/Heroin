@@ -3,7 +3,8 @@ const collections = {
     token: "Tokens",
     users: "Users",
     notificationToken: "NotificationTokens",
-    event: "Events"
+    event: "Events",
+    vote:"Vote"
 };
 
 module.exports = collections;
