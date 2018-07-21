@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HeroIn</string>
+    <string name="label_main_help">Help</string>
+    <string name="label_main_rating">Rating</string>
+    <string name="btn_call_for_help">call for help</string>
+    <string name="rating_hero_desc">Hello Mr. User, I\'m BATMAN! I want you to know, I am doing my best bro! There is so much trouble outside. Have you been satisfied with the rescue operation? Please rate me well.</string>
+    <string name="rating_btn_complete">Complete</string>
+</resources>

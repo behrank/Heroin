@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#030305</color>
+    <color name="colorPrimaryDark">#171717</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="main_button_kalır">#101010</color>
+    <color name="help_label_red">#e84a30</color>
+    <color name="help_label_medium">#dd9d66</color>
+    <color name="help_label_low">#d9d9d9</color>
+
+
+    <color name="banner_circle_bg">#111622</color>
+    <color name="white">#ffffff</color>
+    <color name="backgoundColor">#f2f4f9</color>
+    <color name="chartLine">#1aa8ea</color>
+    <color name="lightBlue">#3EB1E6</color>
+    <color name="loginButtonBg">#0F052A</color>
+    <color name="mediumBlue">#0897da</color>
+    <color name="darkBlue">#0a92d0</color>
+    <color name="navyBlue">#0f052a</color>
+    <color name="clearBlue">#3ebffb</color>
+    <color name="lightGray">#f1f3fa</color>
+    <color name="red">#e93a3a</color>
+    <color name="gray">#9a9fa9</color>
+    <color name="light_gray">#dadde7</color>
+    <color name="lighter_gray">#fafbfc</color>
+</resources>
