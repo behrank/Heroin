@@ -6,40 +6,17 @@ const Schema = mongoose.Schema;
 const objectId = Schema.Types.ObjectId;
 
 const userSchema = new Schema({
+    _id:objectId,
     name: String,
     surname: String,
     email: String,
     password: String,
     dateCreated: Date,
-    avatar: String
+    avatar: String,
 }, { versionKey: false });
 
 mongoose.model("user", userSchema, collections.users);
 var model = mongoose.model("user");
-
-model.getListByIdArray = (idArray, req) => {
-    var dictionary = _dictionary(req);
-    return new Promise((res, rej) => {
-        const query = {
-            _id: {
-                $in: idArray
-            }
-        };
-        const projection = {
-            name: 1,
-            surname: 1,
-            avatar: 1
-        }
-        model.find(query, projection)
-            .then(res)
-            .catch((err) => {
-                rej({
-                    message: dictionary.errorMessages.systemError,
-                    statusCode: responseCode.BAD_REQUEST
-                });
-            });
-    });
-}
 
 model.login = (email, password, req) => {
     var dictionary = _dictionary(req);
@@ -76,20 +53,4 @@ model.login = (email, password, req) => {
             });
     });
 };
-
-model.getById = (id, req) => {
-    var dictionary = _dictionary(req);
-    return new Promise((res, rej) => {
-        model.findById(id)
-            .exec()
-            .then(res)
-            .catch((err) => {
-                rej({
-                    message: dictionary.errorMessages.systemError,
-                    statusCode: responseCode.SERVER_ERROR
-                });
-            });
-    });
-}
-
 module.exports = model;

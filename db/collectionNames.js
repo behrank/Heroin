@@ -1,8 +1,10 @@
+
 const collections = {
-    location: "Locations",
+    hero: "Heroes",
     token: "Tokens",
     users: "Users",
     notificationToken: "NotificationTokens",
+    // Olaylar
     event: "Events"
 };
 

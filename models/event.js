@@ -7,29 +7,59 @@ const objectId = Schema.Types.ObjectId;
 
 const eventSchema = new Schema({
     _id:Schema.Types.ObjectId,
-    title: String,
-    description: String,
-    geo: {
-        type: [Number],
-        index: '2d'
-      },
+    location: {
+        type: { type: String },
+        coordinates: []
+       },
     dateCreated: Date,
+    priority:Number,
+    status:Number,
+    hero: [{type:Schema.Types.ObjectId,ref:"Hero"}],
     user: [{type:Schema.Types.ObjectId,ref:"User"}]
 }, { versionKey: false });
 
-mongoose.model("event", userSchema, collections.users);
+mongoose.model("event", eventSchema, collections.event);
 var model = mongoose.model("event");
 var distance = 1000 / 6371;
 
+//Add
+model.setNew = (event,req) => {
+    var dictionary = _dictionary(req);
+    return new Promise((res, rej) => {
+        if (event.lat == null || event.lng == "") {
+            rej({
+                message: dictionary.errorMessages.systemError,
+                statusCode: responseCode.SERVER_ERROR
+            });
+        } else if (event.lng == null || event.lat == "") {
+            rej({
+                message: dictionary.errorMessages.systemError,
+                statusCode: responseCode.SERVER_ERROR
+            });
+        }
+        model.create(event)
+        .then(res)
+        .catch((err) => {
+            rej({
+                message: dictionary.errorMessages.systemError,
+                statusCode: responseCode.SERVER_ERROR
+            });
+        });
+    });
+}
+
+//List nearby
 model.getListByLocation = (lat,lng, req) => {
     var dictionary = _dictionary(req);
     return new Promise((res, rej) => {
         const query = {
-            $near: [
-                req.body.lat,
-                req.body.lng
-              ],
-              $maxDistance: distance
+            $near: {
+                $maxDistance: 1000,
+                $geometry: {
+                 type: "Point",
+                 coordinates: [lat, lng]
+                }
+            }
         };
         model.find(query)
             .then(res)
@@ -41,7 +71,7 @@ model.getListByLocation = (lat,lng, req) => {
             });
     });
 }
-
+//Single item
 model.getById = (id, req) => {
     var dictionary = _dictionary(req);
     return new Promise((res, rej) => {

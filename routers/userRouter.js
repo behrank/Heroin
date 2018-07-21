@@ -3,13 +3,9 @@ const bodyParser = require("body-parser");
 const guid = require("guid");
 const linq = require("ex-js-linq");
 const math = require("../utilities/math");
-const courierModel = require("../models/courier");
-const bookModel = require("../models/book");
 const userModel = require("../models/user");
 const notificationTokenModel = require("../models/notificationToken");
-const locationModel = require("../models/location");
 const tokenModel = require("../models/token");
-const objectIniter = require("../helpers/objectIniter");
 const responseCode = require("../utilities/responseCode");
 const redisClient = require("../db/redis");
 const redisKeys = require("../db/redisKeys");
@@ -20,6 +16,23 @@ let router = express.Router();
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
+/*
+    Kahramanlar için giriş
+*/
+router.post("/hero/login", (req, res) => {
+    res.status(responseCode.OK).send(responseCode.OK,"");
+    /*
+        Burada süper kahramanlar için yüz tanıma kullanılır. 
+        Kahramanların yüzlerinin birden fazla resmi kullanılarak, OpenCV kütüphanesi ile 
+        yüz tanıma üzerinden login olması sağlanır. Zaman yetersizliği nedeniyle implementasyon 
+        yapılmamıştır. 
+
+        Behran Kankul
+    */
+});
+/*
+    Kullanıcı girişi
+*/
 router.post("/login", (req, res) => {
     var dictionary = _dictionary(req);
     userModel.login(req.body.email, req.body.password,req)
@@ -83,7 +96,7 @@ router.post("/:userId/notification/token", (req, res) => {
                 .send(response(err.statusCode, err.message));
         });
 });
-
+//Register
 router.post("/", (req, res) => {
     var dictionary = _dictionary(req);
     var user = {
@@ -130,7 +143,5 @@ router.post("/", (req, res) => {
         });
 
 });
-
-
 
 module.exports = router;
