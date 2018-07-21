@@ -22,12 +22,14 @@ router.use(bodyParser.json());
 router.post("/hero/login", (req, res) => {
     res.status(responseCode.OK).send(responseCode.OK,"");
     /*
+        //Hero Mode On:
         Burada süper kahramanlar için yüz tanıma kullanılır. 
         Kahramanların yüzlerinin birden fazla resmi kullanılarak, OpenCV kütüphanesi ile 
         yüz tanıma üzerinden login olması sağlanır. Zaman yetersizliği nedeniyle implementasyon 
         yapılmamıştır. 
 
         Behran Kankul
+        //Hero Mode Off:
     */
 });
 /*
