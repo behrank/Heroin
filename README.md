@@ -3,13 +3,14 @@ Zeplin Hackaboom 2018
 
 ## Features as a Hero
 * Receive help requests from human beings. 🚀
-* Create secret parties with other super heroes
+* Create secret parties with other super heroes.
+* As hero, after a hard night who wants to repair his own clothes? No way! You can give a secret tailor to repair your clothes.
 * See your public view as a hero. Public will vote your skills.
+* Login with face detection. Thanks to OpenCV
 
 ## Features as a Human being
-* Receive help requests from human beings. 🚀
-* Create secret parties with other super heroes
-* See your public view as a hero. Public will vote your skills.
+* Send help requests to super heroes. 
+* You may view or rate super hero's skills (courage, respect to environment and his charisma) who's helped you.
 
 ## Built By
 * [Selin İmre]() - [UI/UIX]
